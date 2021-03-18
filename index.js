@@ -255,6 +255,15 @@ client.on('message', function(msg) {
     const index16 = Math.floor(Math.random() * reply16.length)
     msg.reply(reply16[index16])
   }
+  if (msg.content === '^market') {
+    msg.reply('You have entered the Market.. In which section do you want to go?. 1 - Food, Car, pets') 
+  }
+  if (msg.content === '^market food') {
+    msg.reply('Which item do you want to buy from the food market?.. Do you think You can buy')
+  }
+  if (msg.content === '^market car') {
+    msg.reply('Cant access the car maret becoz you are noooob')
+  }
 
   
 
