@@ -105,6 +105,7 @@ const reply16 = [
   'You entered the match.. You were in the middle of the match, but your friend called you.. You went into his house and killed him.. His mother called the police and now you are in the prison.. Congo'
 ]
 
+
 a = 1 
 b = 1
 sum = a + b
@@ -264,6 +265,19 @@ client.on('message', function(msg) {
   if (msg.content === '^market car') {
     msg.reply('Cant access the car maret becoz you are noooob')
   }
+  if (msg.content === '^market food 1') {
+    msg.reply('Current available items are : tomato, brinjal, onions.. To buy a item type "^market food <item>".')
+  }
+  if (msg.content === '^market food tomato') {
+    msg.reply('You purchased a tomato')
+  }
+  if (msg.content === '^market food onions') {
+    msg.reply('You purchased some onions')
+  }
+  if (msg.content === '^market food brinjal') {
+    msg.reply('You purchased brinjals')
+  }
+  
 
   
 
