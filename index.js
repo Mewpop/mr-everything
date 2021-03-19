@@ -104,6 +104,17 @@ const reply16 = [
   'You are not able to enter the match.. Check you internet connection and try again',
   'You entered the match.. You were in the middle of the match, but your friend called you.. You went into his house and killed him.. His mother called the police and now you are in the prison.. Congo'
 ]
+const reply17 = [
+  'You went into his house.. and came back.. coz it was 12 o clock of midnight',
+  'You went into his house.. You drank some booze',
+  'You went into his house.. now whay you want to do ? steal, drink, or come back.. Type - "^friend <action>"'
+]
+const reply18 = [
+  'You successfully stole $400. Thats not a good thing..',
+  'You were caught stealing..',
+  'You successfully stole 100 bucks..',
+  'You tried to steal but, you were not able to find the money..'
+]
 
 
 a = 1 
@@ -276,6 +287,29 @@ client.on('message', function(msg) {
   }
   if (msg.content === '^market food brinjal') {
     msg.reply('You purchased brinjals')
+  }
+  if (msg.content === '^status') {
+    msg.reply('To check the status of @mr.everything, check #our-bots-status')
+  }
+  if (msg.content === '^drive') {
+    msg.reply('Where do you want to go?. The currently availbale places where you can go are - HOSPITAL, Your friend"s apartment. To drive to any of the locations as listed, type - "^drive <location name>"')
+  }
+  if (msg.content === '^drive hospital') {
+    msg.reply('You are not wounded. You cant go in the hospital')
+  }
+  if (msg.content === '^drive friend apartment') {
+    const index17 = Math.floor(Math.random() * reply17.length)
+    msg.reply(reply17[index17])
+  }
+  if (msg.content === '^friend steal') {
+    const index18 = Math.floor(Math.random() * reply18.length)
+    msg.reply(reply18[index18])
+  }
+  if (msg.content === '^firend come back') {
+    msg.reply('You came back from your friend"s apartment')
+  }
+  if (msg.content === '^friend drink') {
+    msg.reply('You drank some booze')
   }
   
 
