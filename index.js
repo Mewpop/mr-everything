@@ -115,6 +115,19 @@ const reply18 = [
   'You successfully stole 100 bucks..',
   'You tried to steal but, you were not able to find the money..'
 ]
+const reply19 = [
+   {files: ["./images/meme1.png"]},
+   {files: ["./images/meme2.png"]},
+   {files: ["./images/meme3.png"]},
+   {files: ["./images/meme4.png"]},
+   {files: ["./images/meme5.png"]},
+   {files: ["./images/meme6.png"]},
+   {files: ["./images/meme7.png"]},
+   {files: ["./images/meme8.png"]},
+   {files: ["./images/meme9.png"]},
+   {files: ["./images/meme10.png"]},
+   {files: ["./images/meme99.png"]},
+]
 
 
 a = 1 
@@ -125,7 +138,7 @@ a2 = 1
 sum1 = a1 + a2
 
 
-client.on('message', function(msg) {
+client.on('message', msg => {
   if (msg.content ===  '^how will be my day today') {
     const index = Math.floor(Math.random() * replies.length)
     msg.reply(replies[index])
@@ -168,9 +181,6 @@ client.on('message', function(msg) {
     const index5 = Math.floor(Math.random() * reply5.length)
     msg.reply(reply5[index5])
   }
-  if (msg.content === '^help') {
-    msg.reply('|EAT|, |DAILY|, |CRATE|, |DAY|, |HI|, |MINE|, |SCORE IN EXAMS|')
-  }
   if (msg.content === '^money') {
     msg.reply('Heyy!! You are not supposed to view a scrub/s balance..')
   }
@@ -196,12 +206,6 @@ client.on('message', function(msg) {
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
   }
-  if (msg.content === '^steal @ᴋᴀᴛʏᴀɴ ᴛʜᴇ ɢʀᴇᴀᴛ#7664') {
-    msg.reply('You are not suppossed to steal a scrub')
-  }
-  
-
-
   if (msg.content === '^inventory') {
     msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
   }
@@ -212,12 +216,9 @@ client.on('message', function(msg) {
   if (msg.content === '^create party') {
     msg.reply('Hey you organized a party.. Hey tell your friends to type "^join party". And order something by typing "^order <food item>"')
   }
-  g = Boolean('there is no party created')
   if (msg.content === '^join party') {
     msg.reply('You have joined the party')
-  } if (msg.content === '^join party') {
-    msg.reply(g)
-  }
+  } 
   if (msg.content === '^order pizza') {
     msg.reply('You have ordered pizza for $56')
   } if (msg.content === '^order pizza') {
@@ -247,7 +248,7 @@ client.on('message', function(msg) {
     const index14 = Math.floor(Math.random() * reply14.length)
     msg.reply(reply14[index14])
   }
-  if (msg.content === '^play') {
+  if (msg.content === '^play music') {
     msg.reply('Tere baap ka naukar nhi hu me')
   }
   if (msg.content === '^play pubg') {
@@ -311,6 +312,20 @@ client.on('message', function(msg) {
   if (msg.content === '^friend drink') {
     msg.reply('You drank some booze')
   }
+  if (msg.content === '^help') {
+    msg.reply('|^eat|, |^daily|, |^crate|, |^day|, |^hi|, |^mine|, |^score in exams|, |^drive|, |^friend steal|, |^market|, |^play pubg|, |^play free fire|')
+  }
+  if (msg.content === '^song') {
+    msg.reply('Go to youtube and listen by yourself')
+  }
+  if (msg.content === '^profile') {
+    msg.reply('go to dank memer and type pls profile.')
+  }
+  if (msg.content === '^meme') {
+    const index19 = Math.floor(Math.random() * reply19.length)
+    msg.reply(reply19[index19])
+  }
+  
   
 
   
