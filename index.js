@@ -116,7 +116,7 @@ const reply18 = [
   'You tried to steal but, you were not able to find the money..'
 ]
 const reply19 = [
-   {files: ["./images/meme1.png"]}
+   {files: ["images/meme1.png"]}
    
 ]
 
