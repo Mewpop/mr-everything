@@ -116,7 +116,8 @@ const reply18 = [
   'You tried to steal but, you were not able to find the money..'
 ]
 const reply19 = [
-   {files: ["images/meme1.png"]}
+   {files: ["https://i.pinimg.com/originals/d3/2c/0b/d32c0b69e97ddeaa2def5a87ec8d2e6e.png"]},
+   {files: ["https://i.pinimg.com/originals/7b/fb/08/7bfb08d064145b0216dccce283f70b59.png"]}
    
 ]
 
