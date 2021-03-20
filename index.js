@@ -116,17 +116,8 @@ const reply18 = [
   'You tried to steal but, you were not able to find the money..'
 ]
 const reply19 = [
-   {files: ["./images/meme1.png"]},
-   {files: ["./images/meme2.png"]},
-   {files: ["./images/meme3.png"]},
-   {files: ["./images/meme4.png"]},
-   {files: ["./images/meme5.png"]},
-   {files: ["./images/meme6.png"]},
-   {files: ["./images/meme7.png"]},
-   {files: ["./images/meme8.png"]},
-   {files: ["./images/meme9.png"]},
-   {files: ["./images/meme10.png"]},
-   {files: ["./images/meme99.png"]},
+   {files: ["./images/meme1.png"]}
+   
 ]
 
 
@@ -325,9 +316,7 @@ client.on('message', msg => {
     const index19 = Math.floor(Math.random() * reply19.length)
     msg.reply(reply19[index19])
   }
-  if (msg.content === '^test') {
-    msg.reply('beep beep!! 11test')
-  }
+  
   
   
 
