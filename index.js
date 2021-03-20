@@ -117,8 +117,15 @@ const reply18 = [
 ]
 const reply19 = [
    {files: ["https://i.pinimg.com/originals/d3/2c/0b/d32c0b69e97ddeaa2def5a87ec8d2e6e.png"]},
-   {files: ["https://i.pinimg.com/originals/7b/fb/08/7bfb08d064145b0216dccce283f70b59.png"]}
-   
+   {files: ["https://i.pinimg.com/originals/7b/fb/08/7bfb08d064145b0216dccce283f70b59.png"]},
+   {files: ["https://i.pinimg.com/564x/9c/88/56/9c8856d60e2c9b32c2ea8c522728b895.jpg"]},
+   {files: ["https://i.pinimg.com/564x/0b/fb/0c/0bfb0c6a53c8226f02fe3732ee23c754.jpg"]},
+   {files: ["https://i.pinimg.com/564x/61/5a/fd/615afd86126ad825c636f1d071c6811f.jpg"]},
+   {files: ["https://i.pinimg.com/564x/8e/2f/d0/8e2fd02dc6c2048f5e44fcb5b9a5092b.jpg"]},
+   {files: ["https://i.pinimg.com/564x/12/3e/90/123e904667cfcaf78745fa4f43902274.jpg"]},
+   {files: ["https://in.pinterest.com/ea1dac90-63d5-425e-a24d-44e0c03b7e6c"]},
+   {files: ["https://in.pinterest.com/9ddbaf24-5e9c-42ca-9e5b-014e0d28a3c3"]},
+   {files: ["https://in.pinterest.com/06c084a0-f315-4ea0-bd55-2193dce63aa9"]}
 ]
 
 
