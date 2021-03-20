@@ -325,6 +325,9 @@ client.on('message', msg => {
     const index19 = Math.floor(Math.random() * reply19.length)
     msg.reply(reply19[index19])
   }
+  if (msg.content === '^test') {
+    msg.reply('beep beep!! 11test')
+  }
   
   
 
