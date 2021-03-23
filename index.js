@@ -4,6 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setPresence({ activity: { name: "GOOD BOII" } })
 });
 const replies = [
   'Hey I think that your day will be good. If not then Have a nice day!',
@@ -122,11 +123,30 @@ const reply19 = [
    {files: ["https://i.pinimg.com/564x/0b/fb/0c/0bfb0c6a53c8226f02fe3732ee23c754.jpg"]},
    {files: ["https://i.pinimg.com/564x/61/5a/fd/615afd86126ad825c636f1d071c6811f.jpg"]},
    {files: ["https://i.pinimg.com/564x/8e/2f/d0/8e2fd02dc6c2048f5e44fcb5b9a5092b.jpg"]},
-   {files: ["https://i.pinimg.com/564x/12/3e/90/123e904667cfcaf78745fa4f43902274.jpg"]},
-   {files: ["https://in.pinterest.com/ea1dac90-63d5-425e-a24d-44e0c03b7e6c"]},
-   {files: ["https://in.pinterest.com/9ddbaf24-5e9c-42ca-9e5b-014e0d28a3c3"]},
-   {files: ["https://in.pinterest.com/06c084a0-f315-4ea0-bd55-2193dce63aa9"]}
+   {files: ["https://i.pinimg.com/564x/12/3e/90/123e904667cfcaf78745fa4f43902274.jpg"]}
 ]
+const embed2 = [
+  new Discord.MessageEmbed()
+  .setTitle("We rolled 8.. And You rolled 10")
+  .setDescription("You won $100")
+  .setAuthor("You won the game")
+  .setFooter("What a scrub!")
+  .setColor("GREEN"),
+  new Discord.MessageEmbed()
+  .setTitle("We rolled 7.. And you rolled 6")
+  .setDescription("You lost $100")
+  .setAuthor("You have lost")
+  .setFooter("Nooooooob")
+  .setColor("RED"),
+  new Discord.MessageEmbed()
+  .setTitle("We rolled 9.. You also rolled 9")
+  .setDescription("TIED!!")
+  .setAuthor("You didnt lost anything..")
+  .setFooter("Bad boi in the house..")
+  .setColor("YELLOW")
+]
+ 
+
 
 
 a = 1 
@@ -324,6 +344,22 @@ client.on('message', msg => {
     const index19 = Math.floor(Math.random() * reply19.length)
     msg.reply(reply19[index19])
   }
+  if (msg.content === '^i wanna fry some eggs') {
+    msg.reply('You have fried some eggs' + {files: ["https://i.pinimg.com/564x/7b/37/a4/7b37a4e1fa8eb927a3ba2a69855b303b.jpg"]})
+  }
+  if (msg.content === '^pro') {
+    const embed = new Discord.MessageEmbed()
+    .setTitle("PROFILE")
+    .setDescription("JUST A SCRUB. Hey noob cant show your profile coz you are a noob")
+    .setColor("RANDOM")
+    .setFooter("Just a scrub.")
+    msg.reply(embed)
+  }
+  if (msg.content === '^bet') {
+    const index20 = Math.floor(Math.random() * embed2.length)
+    msg.reply(embed2[index20])
+  }
+
   
   
   
