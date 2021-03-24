@@ -145,6 +145,7 @@ const embed2 = [
   .setFooter("Bad boi in the house..")
   .setColor("YELLOW")
 ]
+const prefix = '^';
  
 
 
@@ -227,6 +228,10 @@ client.on('message', msg => {
   }
   if (msg.content === '^inventory') {
     msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
+  } else {
+    if (msg.content === 'eat burger') {
+      msg.reply("You ate a burger now you have " + sum -1 + 'burgers')
+    }
   }
   if (msg.content === '^feeling bad') {
     const index9 = Math.floor(Math.random() * reply9.length)
@@ -358,6 +363,36 @@ client.on('message', msg => {
   if (msg.content === '^bet') {
     const index20 = Math.floor(Math.random() * embed2.length)
     msg.reply(embed2[index20])
+  }
+  if (msg.content === '^help me') {
+    const embed100 = new Discord.MessageEmbed()
+    .setTitle("HELP!")
+    .addField("1. MARKET = ^market")
+    .addField("2. ^drive")
+    .addField("3. profile = ^pro")
+    .addField("gamble = ^bet")
+    .addField("memes = ^meme")
+    .addField("Buy food = ^buy <item name>. currently available are burger, pizza, pepsi.")
+    .addField("eggs = ^i wanna fry some eggs")
+    .addField("song = ^song/^play music. this isnt a real feature.")
+    .addField("eat = ^eat <food item>. currently available items for eating are burger, pizza and pepsi")
+    .addField("WANNA KNOW YOU SCORE IN EXAMS? TYPE = ^score in exams")
+    .addField("HI = ^hi. only for bot(dont mention someone)")
+    .addField("OPEN CRATE = ^open daily crate")
+    .addField("WANNA DO SOME MINING = ^mine")
+    .addField("wanna check our status = ^status")
+    .addField("WANNA PLAY PUBG? TYPE = ^play pubg")
+    .addField("WANNA PLAY FREE FIRE? TYPE = ^play free fire")
+    .addField("ORDER = ^order <food item>")
+    .addField("party = ^create party")
+    .addField("^feeling bad")
+    .addField("INVENTORY = ^inventory")
+    .addField("WANNA KNOW HOW WILL BE YOUR DAY TODAY? TYPE = ^how will be my day today")
+    .addField('^rob, ^money, ^bal')
+    .addField("^info, ^my info")
+    .setColor("RANDOM")
+    .setFooter("HELPING A SCRUB..")
+    msg.reply(embed100)
   }
 
   
