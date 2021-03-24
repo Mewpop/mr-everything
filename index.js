@@ -350,7 +350,10 @@ client.on('message', msg => {
     msg.reply(reply19[index19])
   }
   if (msg.content === '^i wanna fry some eggs') {
-    msg.reply('You have fried some eggs' + {files: ["https://i.pinimg.com/564x/7b/37/a4/7b37a4e1fa8eb927a3ba2a69855b303b.jpg"]})
+    msg.reply('You fried some eggs')
+  }
+  if (msg.content === '^i wanna fry some eggs') {
+    msg.reply({files: ["https://i.pinimg.com/564x/7b/37/a4/7b37a4e1fa8eb927a3ba2a69855b303b.jpg"]})
   }
   if (msg.content === '^pro') {
     const embed = new Discord.MessageEmbed()
