@@ -1,10 +1,13 @@
 const Discord = require('discord.js');
+const { callback } = require('./ping');
 const client = new Discord.Client();
+
 
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ activity: { name: "GOOD BOII" } })
+  client.user.setPresence({ activity: { name: "GOOD BOII" } });
+
 });
 const replies = [
   'Hey I think that your day will be good. If not then Have a nice day!',
@@ -393,10 +396,16 @@ client.on('message', msg => {
     .addField("WANNA KNOW HOW WILL BE YOUR DAY TODAY? TYPE = ^how will be my day today")
     .addField('^rob, ^money, ^bal')
     .addField("^info, ^my info")
+    .addField("WANNA KNOW YOUR PING? TYPE - ^ping")
     .setColor("RANDOM")
     .setFooter("HELPING A SCRUB..")
     msg.reply(embed100)
   }
+  if (msg.content === '^ping') {
+    msg.reply(`🏓Your ping is ${Date.now() - msg.createdTimestamp}ms.`)
+  }
+  
+  
 
   
   
