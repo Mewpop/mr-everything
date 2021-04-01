@@ -148,8 +148,7 @@ const embed2 = [
   .setFooter("Bad boi in the house..")
   .setColor("YELLOW")
 ]
-const prefix = '^';
- 
+let pref = '^';
 
 
 
@@ -404,7 +403,23 @@ client.on('message', msg => {
   if (msg.content === '^ping') {
     msg.reply(`🏓Your ping is ${Date.now() - msg.createdTimestamp}ms.`)
   }
-  
+  if (msg.content === '^start jarvis') {
+    msg.reply("You have to download some packages to start jarvis in your computer.. First is, install python.. second is install pyaudio.. third is install speech recognition.. fourth is pyttsx3.. fifth is pywhatkit.. 6th is webbrowser and subprocess.. Once you have downloaded all the packages type ^jarvis done..")
+  }
+  if (msg.content === pref + 'jarvis done')
+  {
+    msg.react("📱")
+    msg.reply("NOW LEARN SOME CODING AND CODE JARVIS BY YOURSELF")
+  }
+  if (msg.content.startsWith("^kill") && msg.mentions.users.first()) {
+    msg.channel.send("HE/SHE IS DEAD.. CONGO")
+  } else if(msg.content === "^kill") {
+    msg.reply("MENTION SOMEONE TO KILL")
+  }
+  if (msg.content.startsWith === msg.mentions.users.first()) {
+    msg.reply("HEYYYYYY!!! TYPE ^kill and mention someone.. If you wanna kill someone......")
+  }
+        
   
 
   
@@ -415,9 +430,6 @@ client.on('message', msg => {
 
 
 });
-
-
-
 
 
 
