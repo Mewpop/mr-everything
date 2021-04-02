@@ -149,7 +149,9 @@ const embed2 = [
   .setColor("YELLOW")
 ]
 let pref = '^';
-
+p1 = 1
+p2 = 1
+shaurya = p1 - p2
 
 
 a = 1 
@@ -158,201 +160,218 @@ sum = a + b
 a1 = 1
 a2 = 1
 sum1 = a1 + a2
-
+const reply20 = [
+  '<@588397196660047885>',
+  '<@708598229058584669>',
+  '<@716179745418772481>',
+  '<@818437800680095744>',
+  '<@820917775949496321>',
+  '<@741195791967715358>',
+  '<@820918445428047882>',
+  '<@727885346305605714>',
+  '<@819552840354889728>'
+]
 
 client.on('message', msg => {
   if (msg.content ===  '^how will be my day today') {
     const index = Math.floor(Math.random() * replies.length)
-    msg.reply(replies[index])
+    msg.channel.send(replies[index])
   }
   if (msg.content === '^buy pizza') {
-    msg.reply('Hey! You just Bought a pizza. Though I dont know thats for party or for chilling')
+    msg.channel.send('Hey! You just Bought a pizza. Though I dont know thats for party or for chilling')
   }
   if (msg.content === '^buy pepsi') {
-    msg.reply('Hey! You  Bought a pepsi. Though I think thats for party')
+    msg.channel.send('Hey! You  Bought a pepsi. Though I think thats for party <819768726412722189>')
   }
   if (msg.content === '^buy bread') {
-    msg.reply('Heyyyy! bro You just Bought a bread. Though I think thats for Your mom.')
+    msg.channel.send('Heyyyy! bro You just Bought a bread. Though I think thats for Your mom.')
   }
   if (msg.content === '^eat pizza') {
-    msg.reply('Good! You just ate pizza')
+    msg.channel.send('Good! You just ate pizza')
   }
   if (msg.content === '^eat pepsi') {
-    msg.reply('Good! You just ate pepsi')
+    msg.channel.send('Good! You just ate pepsi')
   }
   if (msg.content === '^eat bread') {
-    msg.reply('Good! You just ate bread')
+    msg.channel.send('Good! You just ate bread')
   }
   if (msg.content === '^hi') {
     const index2 = Math.floor(Math.random() * reply2.length)
-    msg.reply(reply2[index2])
+    msg.channel.send(reply2[index2])
   }
   if (msg.content === '^mine') {
     const index3 = Math.floor(Math.random() * reply3.length)
-    msg.reply(reply3[index3])
+    msg.channel.send(reply3[index3])
   }
   if (msg.content === '^daily') {
     const index6 = Math.floor(Math.random() * reply6.length)
-    msg.reply(reply6[index6])
+    msg.channel.send(reply6[index6])
   }
   if (msg.content === '^how much will i score in my exams') {
     const index4 = Math.floor(Math.random() * reply4.length)
-    msg.reply(reply4[index4])
+    msg.channel.send(reply4[index4])
   }
   if (msg.content === '^open daily crate') {
     const index5 = Math.floor(Math.random() * reply5.length)
-    msg.reply(reply5[index5])
+    msg.channel.send(reply5[index5])
   }
-  if (msg.content === '^money') {
-    msg.reply('Heyy!! You are not supposed to view a scrub/s balance..')
+  if (msg.content === '^bal' && msg.mentions.users.first()) {
+    msg.channel.send('Heyy!! You are not supposed to view a scrub/s balance..')
+  }
+  if (msg.content === '^balance' && msg.mentions.users.first()) {
+    msg.channel.send('Heyy!! You are not supposed to view a scrub/s balance..')
+  }
+  if (msg.content === '^Balance' && msg.mentions.users.first()) {
+    msg.channel.send('Heyy!! You are not supposed to view a scrub/s balance..')
   }
   if (msg.content === '^rob') {
     const index7 = Math.floor(Math.random() * reply7.length)
-    msg.reply(reply7[index7])
+    msg.channel.send(reply7[index7])
   }
   if (msg.content === '^bal') {
-    msg.reply('Your bal is 0. Like You Loser!!!!!!')
+    msg.channel.send('Your bal is 0. Like You Loser!!!!!!')
   }
+
   if (msg.content === '^info') {
-    msg.reply('My author is ZYPLO.')
+    msg.channel.sendy('My author is ZYPLO.')
   }
   if (msg.content === '^my info') {
 
     (a + b)
     const index8 = Math.floor(Math.random() * reply8.length)
-    msg.reply(reply8[index8])
+    msg.channel.send(reply8[index8])
   }
   if (msg.content === '^buy burger') {
-    msg.reply('You just bought a burger and paid 56$')
+    msg.channel.send('You just bought a burger and paid 56$')
   }
   if (msg.content === '^eat burger') {
-    msg.reply('You Just ate a burger now your food bar is 99%')
+    msg.channel.send('You Just ate a burger now your food bar is 99%')
   }
   if (msg.content === '^inventory') {
-    msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
+    msg.channel.send('You have ' + shaurya + 'Burgers. And ' + sum1 + 'Pizza') 
   } else {
     if (msg.content === 'eat burger') {
-      msg.reply("You ate a burger now you have " + sum -1 + 'burgers')
+      msg.channel.send("You ate a burger now you have " + shaurya + 'burgers')
     }
   }
   if (msg.content === '^feeling bad') {
     const index9 = Math.floor(Math.random() * reply9.length)
-    msg.reply(reply9[index9])
+    msg.channel.send(reply9[index9])
   }
   if (msg.content === '^create party') {
-    msg.reply('Hey you organized a party.. Hey tell your friends to type "^join party". And order something by typing "^order <food item>"')
+    msg.channel.send('Hey you organized a party.. Hey tell your friends to type "^join party". And order something by typing "^order <food item>"')
   }
   if (msg.content === '^join party') {
-    msg.reply('You have joined the party')
+    msg.channel.send('You have joined the party')
   } 
   if (msg.content === '^order pizza') {
-    msg.reply('You have ordered pizza for $56')
+    msg.channel.send('You have ordered pizza for $56')
   } if (msg.content === '^order pizza') {
     const index10 = Math.floor(Math.random() * reply10.length)
-    msg.reply(reply10[index10])
+    msg.channel.send(reply10[index10])
   }
   if (msg.content === '^order burger') {
-    msg.reply('You have ordered burger for $126')
+    msg.channel.send('You have ordered burger for $126')
   } if (msg.content === '^order burger') {
     const index11 = Math.floor(Math.random() * reply11.length)
-    msg.reply(reply11[index11])
+    msg.channel.send(reply11[index11])
   }
   if (msg.content === '^order pepsi') {
-    msg.reply('You have ordered pepsi for $20')
+    msg.channel.send('You have ordered pepsi for $20')
   } if (msg.content === '^order pepsi') {
     const index12 = Math.floor(Math.random() * reply12.length)
-    msg.reply(reply12[index12])
+    msg.channel.send(reply12[index12])
   }
   if (msg.content === '^play free fire') {
-    msg.reply('Which Mode do you wanna play? We currently have 2 modes enabled. Classic and Clash squad. Type "^classic to play classic, and "^royal" to play clash squad')
+    msg.channel.send('Which Mode do you wanna play? We currently have 2 modes enabled. Classic and Clash squad. Type "^classic to play classic, and "^royal" to play clash squad')
   }
   if (msg.content === '^classic') {
     const index13 = Math.floor(Math.random() * reply13.length)
-    msg.reply(reply13[index13])
+    msg.channel.send(reply13[index13])
   }
   if (msg.content === '^royal') {
     const index14 = Math.floor(Math.random() * reply14.length)
-    msg.reply(reply14[index14])
+    msg.channel.send(reply14[index14])
   }
   if (msg.content === '^play music') {
-    msg.reply('Tere baap ka naukar nhi hu me')
+    msg.channel.send('Tere baap ka naukar nhi hu me')
   }
   if (msg.content === '^play pubg') {
-    msg.reply('We have currently two mode available TDM and Classic.. Type "^play pubg tdm" to play tdm mode. And type "^play pubg classic <map>" to play classic mode. We only have erangle map available.')
+    msg.channel.send('We have currently two mode available TDM and Classic.. Type "^play pubg tdm" to play tdm mode. And type "^play pubg classic <map>" to play classic mode. We only have erangle map available.')
   }
   if (msg.content === '^play pubg tdm') {
-    msg.reply('You have started match making')
+    msg.channel.send('You have started match making')
   }
   if (msg.content === '^play pubg tdm') {
     const index15 = Math.floor(Math.random() * reply15.length)
-    msg.reply(reply15[index15])
+    msg.channel.send(reply15[index15])
   }
   if (msg.content === '^play pubg classic') {
-    msg.reply('You have started the match making')
+    msg.channel.send('You have started the match making')
   }
   if (msg.content === '^play pubg classic') { 
     const index16 = Math.floor(Math.random() * reply16.length)
-    msg.reply(reply16[index16])
+    msg.channel.send(reply16[index16])
   }
   if (msg.content === '^market') {
-    msg.reply('You have entered the Market.. In which section do you want to go?. 1 - Food, Car, pets') 
+    msg.channel.send('You have entered the Market.. In which section do you want to go?. 1 - Food, Car, pets') 
   }
   if (msg.content === '^market food') {
-    msg.reply('Which item do you want to buy from the food market?.. Do you think You can buy')
+    msg.channel.send('Which item do you want to buy from the food market?.. Do you think You can buy')
   }
   if (msg.content === '^market car') {
-    msg.reply('Cant access the car maret becoz you are noooob')
+    msg.channel.send('Cant access the car maret becoz you are noooob')
   }
   if (msg.content === '^market food 1') {
-    msg.reply('Current available items are : tomato, brinjal, onions.. To buy a item type "^market food <item>".')
+    msg.channel.send('Current available items are : tomato, brinjal, onions.. To buy a item type "^market food <item>".')
   }
   if (msg.content === '^market food tomato') {
-    msg.reply('You purchased a tomato')
+    msg.channel.send('You purchased a tomato')
   }
   if (msg.content === '^market food onions') {
-    msg.reply('You purchased some onions')
+    msg.channel.send('You purchased some onions')
   }
   if (msg.content === '^market food brinjal') {
-    msg.reply('You purchased brinjals')
+    msg.channel.send('You purchased brinjals')
   }
   if (msg.content === '^status') {
-    msg.reply('To check the status of @mr.everything, check #our-bots-status')
+    msg.channel.send('To check the status of @mr.everything, check #our-bots-status')
   }
   if (msg.content === '^drive') {
-    msg.reply('Where do you want to go?. The currently availbale places where you can go are - HOSPITAL, Your friend"s apartment. To drive to any of the locations as listed, type - "^drive <location name>"')
+    msg.channel.send('Where do you want to go?. The currently availbale places where you can go are - HOSPITAL, Your friend"s apartment. To drive to any of the locations as listed, type - "^drive <location name>"')
   }
   if (msg.content === '^drive hospital') {
-    msg.reply('You are not wounded. You cant go in the hospital')
+    msg.channel.send('You are not wounded. You cant go in the hospital')
   }
   if (msg.content === '^drive friend apartment') {
     const index17 = Math.floor(Math.random() * reply17.length)
-    msg.reply(reply17[index17])
+    msg.channel.send(reply17[index17])
   }
   if (msg.content === '^friend steal') {
     const index18 = Math.floor(Math.random() * reply18.length)
-    msg.reply(reply18[index18])
+    msg.channel.send(reply18[index18])
   }
   if (msg.content === '^firend come back') {
-    msg.reply('You came back from your friend"s apartment')
+    msg.channel.send('You came back from your friend"s apartment')
   }
   if (msg.content === '^friend drink') {
-    msg.reply('You drank some booze')
+    msg.channel.send('You drank some booze')
   }
   if (msg.content === '^song') {
-    msg.reply('Go to youtube and listen by yourself')
+    msg.channel.send('Go to youtube and listen by yourself')
   }
   if (msg.content === '^profile') {
-    msg.reply('go to dank memer and type pls profile.')
+    msg.channel.send('go to dank memer and type pls profile.')
   }
   if (msg.content === '^meme') {
     const index19 = Math.floor(Math.random() * reply19.length)
-    msg.reply(reply19[index19])
+    msg.channel.send(reply19[index19])
   }
   if (msg.content === '^i wanna fry some eggs') {
-    msg.reply('You fried some eggs')
+    msg.channel.send('You fried some eggs')
   }
   if (msg.content === '^i wanna fry some eggs') {
-    msg.reply({files: ["https://i.pinimg.com/564x/7b/37/a4/7b37a4e1fa8eb927a3ba2a69855b303b.jpg"]})
+    msg.channel.send({files: ["https://i.pinimg.com/564x/7b/37/a4/7b37a4e1fa8eb927a3ba2a69855b303b.jpg"]})
   }
   if (msg.content === '^pro') {
     const embed = new Discord.MessageEmbed()
@@ -360,15 +379,15 @@ client.on('message', msg => {
     .setDescription("JUST A SCRUB. Hey noob cant show your profile coz you are a noob")
     .setColor("RANDOM")
     .setFooter("Just a scrub.")
-    msg.reply(embed)
+    msg.channel.send(embed)
   }
   if (msg.content === '^bet') {
     const index20 = Math.floor(Math.random() * embed2.length)
-    msg.reply(embed2[index20])
+    msg.channel.send(embed2[index20])
   }
   if (msg.content === '^help' && '^HELP' && '^Help') {
     const embed100 = new Discord.MessageEmbed()
-    .setTitle("HELP!")
+    .setAuthor("HELP!")
     .addField("1. MARKET = ^market")
     .addField("2. ^drive")
     .addField("3. profile = ^pro")
@@ -393,28 +412,33 @@ client.on('message', msg => {
     .addField('^rob, ^money, ^bal')
     .addField("^info, ^my info")
     .addField("WANNA KNOW YOUR PING? TYPE - ^ping")
+    .addField("^who is dumb")
     .setColor("RANDOM")
     .setFooter("HELPING A SCRUB..")
-    msg.reply(embed100)
+    msg.channel.send(embed100)
   }
   if (msg.content === '^ping') {
-    msg.reply(`🏓Your ping is ${Date.now() - msg.createdTimestamp}ms.`)
+    msg.channel.send(`🏓Your ping is ${Date.now() - msg.createdTimestamp}ms.`)
   }
   if (msg.content === '^start jarvis') {
-    msg.reply("You have to download some packages to start jarvis in your computer.. First is, install python.. second is install pyaudio.. third is install speech recognition.. fourth is pyttsx3.. fifth is pywhatkit.. 6th is webbrowser and subprocess.. Once you have downloaded all the packages type ^jarvis done..")
+    msg.channel.send("You have to download some packages to start jarvis in your computer.. First is, install python.. second is install pyaudio.. third is install speech recognition.. fourth is pyttsx3.. fifth is pywhatkit.. 6th is webbrowser and subprocess.. Once you have downloaded all the packages type ^jarvis done..")
   }
   if (msg.content === pref + 'jarvis done')
   {
     msg.react("📱")
-    msg.reply("NOW LEARN SOME CODING AND CODE JARVIS BY YOURSELF")
+    msg.channel.send("NOW LEARN SOME CODING AND CODE JARVIS BY YOURSELF")
   }
   if (msg.content.startsWith("^kill") && msg.mentions.users.first()) {
     msg.channel.send("HE/SHE IS DEAD.. CONGO")
   } else if(msg.content === "^kill") {
-    msg.reply("MENTION SOMEONE TO KILL")
+    msg.channel.send("MENTION SOMEONE TO KILL")
   }
   if (msg.content.startsWith === msg.mentions.users.first()) {
-    msg.reply("HEYYYYYY!!! TYPE ^kill and mention someone.. If you wanna kill someone......")
+    msg.channel.send("HEYYYYYY!!! TYPE ^kill and mention someone.. If you wanna kill someone......")
+  }
+  if (msg.content === '^who is dumb') {
+    const index20 = Math.floor(Math.random() * reply20.length)
+    msg.channel.send(reply20[index20 + 'IS DUMB..'])
   }
         
   
