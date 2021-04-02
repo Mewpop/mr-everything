@@ -338,9 +338,6 @@ client.on('message', msg => {
   if (msg.content === '^friend drink') {
     msg.reply('You drank some booze')
   }
-  if (msg.content === '^help') {
-    msg.reply('|^eat|, |^daily|, |^crate|, |^day|, |^hi|, |^mine|, |^score in exams|, |^drive|, |^friend steal|, |^market|, |^play pubg|, |^play free fire|')
-  }
   if (msg.content === '^song') {
     msg.reply('Go to youtube and listen by yourself')
   }
@@ -369,7 +366,7 @@ client.on('message', msg => {
     const index20 = Math.floor(Math.random() * embed2.length)
     msg.reply(embed2[index20])
   }
-  if (msg.content === '^help me') {
+  if (msg.content === '^help' && '^HELP' && '^Help') {
     const embed100 = new Discord.MessageEmbed()
     .setTitle("HELP!")
     .addField("1. MARKET = ^market")
