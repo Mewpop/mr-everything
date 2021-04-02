@@ -438,7 +438,7 @@ client.on('message', msg => {
   }
   if (msg.content === '^who is dumb') {
     const index20 = Math.floor(Math.random() * reply20.length)
-    msg.channel.send(reply20[index20 + 'IS DUMB..'])
+    msg.channel.send(reply20[index20] + 'IS DUMB..')
   }
         
   
